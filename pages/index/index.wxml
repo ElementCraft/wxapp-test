@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+	<scroll-view scroll-y style="height: 2000px;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-top="{{scrollTop}}">
+		<view class="newest-article article-list">
+			<view class="weui-panel weui-panel_access">
+				<view class="weui-panel__hd">最新文章</view>
+				<view class="weui-panel__bd">
+					<navigator wx:key="article.id" wx:for="{{newestArticles}}" wx:for-item="article" url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+						<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+							<image class="weui-media-box__thumb" src="{{article.iconPath}}" />
+						</view>
+						<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+							<view class="weui-media-box__title">{{article.title}}</view>
+							<view class="weui-media-box__info weui-flex">
+								<view class="weui-media-box__info__meta weui-flex__item">{{article.userColumn.user.nickName}}</view>
+								<view class="weui-media-box__info__meta weui-flex__item">{{article.gmtCreate}}</view>
+								<view class="weui-media-box__info__meta weui-flex__item text-right">{{article.userColumn.title}}</view>
+							</view>
+						</view>
+					</navigator>
+				</view>
+				<view class="weui-panel__ft">
+					<view class="weui-cell weui-cell_access weui-cell_link">
+						<view class="weui-cell__bd">查看更多</view>
+						<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="hot-article">
+			<view class="weui-panel weui-panel_access">
+				<view class="weui-panel__hd">热门文章</view>
+				<view class="weui-panel__bd">
+					<navigator wx:key="article.id" wx:for="{{hotArticles}}" wx:for-item="article" url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+						<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+							<image class="weui-media-box__thumb" src="{{article.iconPath}}" />
+						</view>
+						<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+							<view class="weui-media-box__title">{{article.title}}</view>
+							<view class="weui-media-box__info">
+								<view class="weui-media-box__info__meta">{{article.userColumn.user.nickName}}</view>
+								<view class="weui-media-box__info__meta">{{article.gmtCreate}}</view>
+								<view class="weui-media-box__info__meta float-right">{{article.userColumn.title}}</view>
+							</view>
+						</view>
+					</navigator>
+				</view>
+				<view class="weui-panel__ft">
+					<view class="weui-cell weui-cell_access weui-cell_link">
+						<view class="weui-cell__bd">查看更多</view>
+						<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="hot-user">
+			<text>test</text>
+		</view>
+	</scroll-view>
+	
+</view>

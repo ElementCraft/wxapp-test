@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#009688",
+    "navigationBarTitleText": "菜鸟博客",
+    "navigationBarTextStyle":"black"
+  }
+}
